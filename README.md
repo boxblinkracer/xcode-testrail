@@ -1,10 +1,9 @@
 
 
 ![Build Status](https://github.com/boxblinkracer/xcode-testrail/actions/workflows/ci_pipe.yml/badge.svg)
-[![Version](https://img.shields.io/cocoapods/v/xcode-testrail.svg?style=flat)](https://cocoapods.org/pods/xcode-testrail)
-[![License](https://img.shields.io/cocoapods/l/xcode-testrail.svg?style=flat)](https://cocoapods.org/pods/xcode-testrail)
-[![Platform](https://img.shields.io/cocoapods/p/xcode-testrail.svg?style=flat)](https://cocoapods.org/pods/xcode-testrail)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/boxblinkracer/xcode-testrail) 
+[![Version](https://img.shields.io/cocoapods/v/XcodeTestrail.svg?style=flat)](https://cocoapods.org/pods/xcode-testrail)
+[![License](https://img.shields.io/cocoapods/l/XcodeTestrail.svg?style=flat)](https://cocoapods.org/pods/xcode-testrail)
+[![Platform](https://img.shields.io/cocoapods/p/XcodeTestrail.svg?style=flat)](https://cocoapods.org/pods/xcode-testrail)
 
 This integration helps you to automatically send test results to TestRail. And yes, super easy and simple!
 
