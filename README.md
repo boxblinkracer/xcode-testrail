@@ -54,9 +54,13 @@ TESTRAIL_RUN_ID=161
 ### 3. Register Plugin
 
 Just register the TestRail integration in the setup of your test files.
+Also make sure to import the module with the `@testable` keyword, otherwise TestRail will not be found!
+
 There's nothing more that is required to register the TestRail reporter.
 
 ```javascript 
+@testable import xcode_testrail
+
 override func setUpWithError() throws
 {
     try super.setUpWithError()
