@@ -1,15 +1,20 @@
-name: CI
+name: CI Pipeline
 
-on: [push]
+
+on:
+  push:
+  workflow_dispatch:
+
 
 jobs:
 
-  build:
-
+  lint:
+    name: Linter
     runs-on: macOS-latest
-
     steps:
-      - uses: actions/checkout@v2
+      - 
+      - name: Clone Code
+        uses: actions/checkout@v2
 
-      - name: Pod lib lint
-        run: pod lib lint
+      - name: Run Linter
+        run: make lint -B

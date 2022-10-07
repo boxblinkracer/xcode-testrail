@@ -7,5 +7,5 @@ help:
 
 # ---------------------------------------------------------------------------------------------
 
-build: ## Prepares a pod release
+lint: ## Runs the Pod Linter
 	pod lib lint
