@@ -1,6 +1,6 @@
 
 
-
+![Build Status](https://github.com/boxblinkracer/xcode-testrail/actions/workflows/ci_pipe.yml/badge.svg)
 [![Version](https://img.shields.io/cocoapods/v/xcode-testrail.svg?style=flat)](https://cocoapods.org/pods/xcode-testrail)
 [![License](https://img.shields.io/cocoapods/l/xcode-testrail.svg?style=flat)](https://cocoapods.org/pods/xcode-testrail)
 [![Platform](https://img.shields.io/cocoapods/p/xcode-testrail.svg?style=flat)](https://cocoapods.org/pods/xcode-testrail)
