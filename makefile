@@ -8,7 +8,7 @@ help:
 # ---------------------------------------------------------------------------------------------
 
 lint: ## Runs the Pod Linter
-	pod lib lint
+	arch -x86_64 pod lib lint
 
 release: ## Releases a new version
-	pod trunk push XcodeTestrail.podspec
+	arch -x86_64 pod trunk push XcodeTestrail.podspec
