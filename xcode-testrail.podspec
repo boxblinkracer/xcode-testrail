@@ -23,4 +23,7 @@ A decoupled TestRail integration for your Xcode project to easily send results t
   s.ios.deployment_target = '12.0'
 
   s.source_files = 'xcode-testrail/Classes/**/*'
+
+  s.frameworks = 'XCTest'
+
 end
