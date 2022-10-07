@@ -22,7 +22,7 @@ Open your podfile and add this to your test target.
 
 ```bash 
 target 'MyTestTarget' do
-    pod 'xcode-testrail', :git => 'https://github.com/boxblinkracer/xcode-testrail.git'
+    pod 'XcodeTestrail'
 end
 ```
 
