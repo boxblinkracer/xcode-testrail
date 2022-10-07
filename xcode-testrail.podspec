@@ -24,6 +24,9 @@ A decoupled TestRail integration for your Xcode project to easily send results t
 
   s.source_files = 'xcode-testrail/Classes/**/*'
 
+
+  s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
+
   s.frameworks = 'XCTest'
 
 end
