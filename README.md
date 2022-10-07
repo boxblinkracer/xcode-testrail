@@ -16,9 +16,23 @@ Add your TestRail credentials in Xcode, decide which test results should be sent
 xcode-testrail is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```ruby 
-pod 'xcode-testrail'
+
+You usually only need to install the integration for your test targets.
+Open your podfile and add this to your test target.
+
+```bash 
+target 'MyTestTarget' do
+    pod 'xcode-testrail', :git => 'https://github.com/boxblinkracer/xcode-testrail.git'
+end
 ```
+
+Then just install your pods.
+
+```bash 
+pod install
+```
+
+
 
 ### 2. Setup TestRail credentials
 
