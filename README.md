@@ -12,7 +12,7 @@ Add your TestRail credentials in Xcode, decide which test results should be sent
 
 ### 1. Installation
 
-xcode-testrail is available through [CocoaPods](https://cocoapods.org). To install
+This integration is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 You usually only need to install the integration for your test targets.
