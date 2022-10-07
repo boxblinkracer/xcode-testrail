@@ -9,3 +9,6 @@ help:
 
 lint: ## Runs the Pod Linter
 	pod lib lint
+
+release: ## Releases a new version
+	pod trunk push XcodeTestrail.podspec
