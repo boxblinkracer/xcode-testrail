@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'xcode-testrail'
   s.version          = '0.1.0'
-  s.summary          = 'A decoupled TestRail integration for your Xcode project to easily send results to TestRail.'
+  s.summary          = 'TestRail integration for your Xcode tests.'
 
   s.description      = <<-DESC
 A decoupled TestRail integration for your Xcode project to easily send results to TestRail.
@@ -24,6 +24,8 @@ A decoupled TestRail integration for your Xcode project to easily send results t
 
   s.source_files = 'xcode-testrail/Classes/**/*'
 
+
+  s.swift_version = [ "5.0" ]
 
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
 

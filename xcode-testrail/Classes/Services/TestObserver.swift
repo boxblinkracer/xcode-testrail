@@ -72,7 +72,6 @@ class TestObserver: NSObject, XCTestObservation
         var caseIdNumber = caseId.replacingOccurrences(of: "C", with: "")
         caseIdNumber = caseIdNumber.replacingOccurrences(of: "]", with: "")
 
-        let hasSucceeded = (testCase.testRun?.hasSucceeded)!;
         let durationS = Int((testCase.testRun?.testDuration)!);
 
         self.testrail.testFailed(
