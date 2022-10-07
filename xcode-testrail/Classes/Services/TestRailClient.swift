@@ -105,7 +105,7 @@ class TestRailClient
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
 
             if let error = error {
-                print("Error took place \(error)")
+                print("TestRail Response Error: \(error)")
                 return
             }
 

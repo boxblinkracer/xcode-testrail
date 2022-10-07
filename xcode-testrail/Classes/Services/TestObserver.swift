@@ -25,9 +25,6 @@ class TestObserver: NSObject, XCTestObservation
 
         let functionName = testCase.name;
 
-        print("TestRail case finished: " + functionName)
-
-
         let regex = try! NSRegularExpression(pattern: "([_]+[C]+\\d+)")
 
         let matches = regex.matches(in: functionName, range: NSMakeRange(0, functionName.count));
@@ -58,12 +55,8 @@ class TestObserver: NSObject, XCTestObservation
     }
 
     public func testCase(_ testCase: XCTestCase, didFailWithDescription description: String, inFile filePath: String?, atLine lineNumber: Int) {
-        print("Test case failed. Message: " + description)
 
         let functionName = testCase.name;
-
-        print("TestRail case finished: " + functionName)
-
 
         let regex = try! NSRegularExpression(pattern: "([_]+[C]+\\d+)")
 
