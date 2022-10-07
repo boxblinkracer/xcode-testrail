@@ -19,9 +19,26 @@ class TestRail
     init()
     {
 
-        let domain = ProcessInfo.processInfo.environment["TESTRAIL_DOMAIN"] ?? "";
-        let username = ProcessInfo.processInfo.environment["TESTRAIL_USER"] ?? "";
-        let password = ProcessInfo.processInfo.environment["TESTRAIL_PWD"] ?? "";
+        var domain = "";
+        var username = "";
+        var password = "";
+        var runId = "";
+
+
+        let configContent = Resource(name: "testrail", type: "conf").content;
+
+        if (configContent != nil) {
+
+            let iniParser = IniParser(content: configContent!);
+
+             domain = iniParser.getValue(key: "TESTRAIL_DOMAIN");
+             username = iniParser.getValue(key: "TESTRAIL_USER");
+             password = iniParser.getValue(key: "TESTRAIL_PWD");
+             runId = iniParser.getValue(key: "TESTRAIL_RUN_ID");
+        }
+
+
+        self.runId = runId;
 
         self.client = TestRailClient(
             domain: domain,
@@ -29,15 +46,18 @@ class TestRail
             password: password
         );
 
-        self.runId = ProcessInfo.processInfo.environment["TESTRAIL_RUN_ID"] ?? "";
 
         if (self.isConfigValid())
         {
-            print("TestRail Configuration is valid.");
-        }
-        else
-        {
-            print("TestRail Configuration is invalid. Skipping integration...");
+            print("");
+            print("TESTRAIL INTEGRATION");
+            print("*******************************************");
+            print("TestRail Domain: " + domain);
+            print("TestRail User: " + username);
+            print("Mode: Use existing Run");
+            print("RunID: " + runId);
+            print("");
+            print("");
         }
     }
 
@@ -71,6 +91,11 @@ class TestRail
 
     private func isConfigValid() -> Bool
     {
+        if (!self.client.isConfigValid())
+        {
+            return false;
+        }
+
         if (self.runId == "")
         {
             return false;

@@ -1,0 +1,6 @@
+use_frameworks!
+target 'xcode-testrail_Tests' do
+  pod 'xcode-testrail', :path => '../'
+  
+  
+end

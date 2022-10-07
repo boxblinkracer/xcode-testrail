@@ -9,6 +9,7 @@ class TestRailClient
 {
 
     private var baseUrl : String;
+    private var domain : String;
     private var username : String;
     private var password : String;
 
@@ -16,11 +17,33 @@ class TestRailClient
 
     init(domain : String, username : String, password : String)
     {
-        self.baseUrl = "https://" + domain + "/index.php?/api/v2";
+        self.domain = domain;
         self.username = username;
         self.password = password;
+
+        self.baseUrl = "https://" + domain + "/index.php?/api/v2";
     }
 
+
+    public func isConfigValid() -> Bool
+    {
+        if (self.domain == "")
+        {
+            return false;
+        }
+
+        if (self.username == "")
+        {
+            return false;
+        }
+
+        if (self.password == "")
+        {
+            return false;
+        }
+
+        return true;
+    }
 
     public func sendResult(runId : Int, caseId: Int, statusId : Int, durationS : Int, comment : String)
     {
