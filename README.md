@@ -1,3 +1,7 @@
+<p align="center">
+   <img width="200px" src="/assets/xcode.png">
+</p>
+<h1 align="center">(Super Easy) Xcode TestRail Integration</h1>
 
 
 ![Build Status](https://github.com/boxblinkracer/xcode-testrail/actions/workflows/ci_pipe.yml/badge.svg)
