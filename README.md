@@ -45,7 +45,7 @@ Please keep in mind, the `runId` is always the test run, that you want to send t
 You can find the ID inside the test run in TestRail. It usually starts with an R, like "R68".
 
 ```ini 
-TESTRAIL_DOMAIN=xxx.testrail.com
+TESTRAIL_DOMAIN=xxx.testrail.io
 TESTRAIL_USER=xxx
 TESTRAIL_PWD=xxxx
 TESTRAIL_RUN_ID=161
@@ -90,6 +90,41 @@ public func testMyFeature_C6437()
 ## That's it!
 
 You can now start Xcode, and all your results should be sent to TestRail as soon as your mapped tests pass or fail!
+
+# CI/CD Pipelines
+
+It's also possible to run the integration within a CI/CD pipeline.
+In most cases you probably want to create separate test runs for different devices.
+
+Therefore I would recommend creating a `Test Plan` in TestRail.
+This plan can then create different test runs for every device.
+
+<p align="center">
+   <img width="100%" src="/assets/testrail_plan.png">
+</p>
+
+In your pipeline, just create a `testrail.conf` file and fill it with the RunID for the specific device test.
+You can either create the full file dynamically, or maybe create a template that comes without a run id.
+In that case we simply copy the template before we start the test, and then add our specific run id.
+
+```yaml  
+# template.conf
+TESTRAIL_DOMAIN=xxx.testrail.io
+TESTRAIL_USER=xxx
+TESTRAIL_PWD=xxxx
+```
+
+```bash  
+# copy template
+cp ./template.conf src/testrail.conf
+
+# assign our iPhone 14 Pro (iOS 16.0) Run ID => 166
+echo "TESTRAIL_RUN_ID=166" >> src/testrail.conf
+
+# start our Xcode tests
+xcodebuild test -workspace xxx -scheme xxx -testPlan UITestsPlan -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.0'
+```
+
 
 ## License
 
