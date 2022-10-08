@@ -96,8 +96,8 @@ You can now start Xcode, and all your results should be sent to TestRail as soon
 It's also possible to run the integration within a CI/CD pipeline.
 In most cases you probably want to create separate test runs for different devices.
 
-Therefore I would recommend creating a `Test Plan` in TestRail.
-This plan can then create different test runs for every device.
+I would recommend creating a `Test Plan` in TestRail.
+This plan can then contain different test runs for every device.
 
 <p align="center">
    <img width="100%" src="/assets/testrail_plan.png">
