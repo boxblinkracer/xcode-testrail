@@ -11,6 +11,11 @@ import XCTest
 class TestRail
 {
 
+    // we must only register ourself ONCE
+    // when running multiple test files of a test plan
+    static var alreadyRegistered : Bool = false;
+
+
     private var client : TestRailClient;
 
     private var runId : String;
@@ -63,10 +68,17 @@ class TestRail
 
     public func register()
     {
+        if (TestRail.alreadyRegistered)
+        {
+            return;
+        }
+
         let observer = TestObserver(testrail: self);
         let observationCenter = XCTestObservationCenter.shared;
 
         observationCenter.addTestObserver(observer);
+
+        TestRail.alreadyRegistered = true;
     }
 
     public func testPassed(caseId: Int, comment : String, durationS: Int)
