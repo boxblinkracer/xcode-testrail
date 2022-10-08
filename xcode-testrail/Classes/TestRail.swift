@@ -18,16 +18,19 @@ class TestRail
 
     private var client : TestRailClient;
 
+    private var domain : String;
+    private var username : String;
+    private var password : String;
     private var runId : String;
 
 
     init()
     {
 
-        var domain = "";
-        var username = "";
-        var password = "";
-        var runId = "";
+        self.domain = "";
+        self.username = "";
+        self.password = "";
+        self.runId = "";
 
 
         let configContent = Resource(name: "testrail", type: "conf").content;
@@ -36,24 +39,35 @@ class TestRail
 
             let iniParser = IniParser(content: configContent!);
 
-             domain = iniParser.getValue(key: "TESTRAIL_DOMAIN");
-             username = iniParser.getValue(key: "TESTRAIL_USER");
-             password = iniParser.getValue(key: "TESTRAIL_PWD");
-             runId = iniParser.getValue(key: "TESTRAIL_RUN_ID");
+            self.domain = iniParser.getValue(key: "TESTRAIL_DOMAIN");
+            self.username = iniParser.getValue(key: "TESTRAIL_USER");
+            self.password = iniParser.getValue(key: "TESTRAIL_PWD");
+            self.runId = iniParser.getValue(key: "TESTRAIL_RUN_ID");
         }
-
-
-        self.runId = runId;
 
         self.client = TestRailClient(
             domain: domain,
             username: username,
             password: password
         );
+    }
 
+    public func register()
+    {
+        if (TestRail.alreadyRegistered)
+        {
+            return;
+        }
+
+        TestRail.alreadyRegistered = true;
 
         if (self.isConfigValid())
         {
+            let observer = TestObserver(testrail: self);
+            let observationCenter = XCTestObservationCenter.shared;
+            observationCenter.addTestObserver(observer);
+
+            print("");
             print("");
             print("TESTRAIL INTEGRATION");
             print("*******************************************");
@@ -64,21 +78,6 @@ class TestRail
             print("");
             print("");
         }
-    }
-
-    public func register()
-    {
-        if (TestRail.alreadyRegistered)
-        {
-            return;
-        }
-
-        let observer = TestObserver(testrail: self);
-        let observationCenter = XCTestObservationCenter.shared;
-
-        observationCenter.addTestObserver(observer);
-
-        TestRail.alreadyRegistered = true;
     }
 
     public func testPassed(caseId: Int, comment : String, durationS: Int)
