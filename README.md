@@ -115,13 +115,13 @@ TESTRAIL_PWD=xxxx
 ```
 
 ```bash  
-# copy template
+# copy template before a new device test
 cp ./template.conf src/testrail.conf
 
-# assign our iPhone 14 Pro (iOS 16.0) Run ID => 166
+# assign our iPhone 14 Pro (iOS 16.0) Run ID for our Release Plan in TestRail (R166)
 echo "TESTRAIL_RUN_ID=166" >> src/testrail.conf
 
-# start our Xcode tests
+# start our Xcode tests for iPhone 14 Pro, iOS 16.0
 xcodebuild test -workspace xxx -scheme xxx -testPlan UITestsPlan -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.0'
 ```
 
