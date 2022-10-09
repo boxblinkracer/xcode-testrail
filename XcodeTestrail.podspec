@@ -22,7 +22,7 @@ A decoupled TestRail integration for your Xcode project to easily send results t
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'xcode-testrail/Classes/**/*'
+  s.source_files = 'src/Classes/**/*'
 
 
   s.swift_version = [ "5.0" ]

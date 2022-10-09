@@ -18,3 +18,17 @@ jobs:
 
       - name: Run Linter
         run: make lint -B
+
+  tests:
+    name: Unit Tests
+    runs-on: macOS-latest
+    steps:
+
+      - name: Clone Code
+        uses: actions/checkout@v2
+
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_14.0.app && /usr/bin/xcodebuild -version
+
+      - name: Run tests
+        run: make tests -B

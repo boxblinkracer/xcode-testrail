@@ -7,8 +7,13 @@ help:
 
 # ---------------------------------------------------------------------------------------------
 
+tests: ## Starts all Unit Tests
+	cd src && xcodebuild test -scheme UnitTests -destination "platform=iOS Simulator,name=iPhone 14,OS=16.0"
+
 lint: ## Runs the Pod Linter
 	arch -x86_64 pod lib lint
+
+# ---------------------------------------------------------------------------------------------
 
 release: ## Releases a new version
 	arch -x86_64 pod trunk push XcodeTestrail.podspec
