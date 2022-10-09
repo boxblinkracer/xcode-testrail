@@ -34,4 +34,4 @@ jobs:
         run: make devices -B
 
       - name: Run tests
-        run: cd src && xcodebuild test -scheme UnitTests -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0"
+        run: cd src && xcodebuild test -scheme UnitTests -destination "platform=iOS Simulator,name=Any iOS Simulator Device"
