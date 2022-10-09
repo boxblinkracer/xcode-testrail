@@ -30,5 +30,8 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
 
+      - name: List Devices
+        run: make devices -B
+
       - name: Run tests
         run: make tests -B

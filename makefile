@@ -7,8 +7,13 @@ help:
 
 # ---------------------------------------------------------------------------------------------
 
+devices: ## Lists all available Xcode devices
+	xcrun xctrace list devices
+
+# ---------------------------------------------------------------------------------------------
+
 tests: ## Starts all Unit Tests
-	cd src && xcodebuild test -scheme UnitTests -destination "platform=iOS Simulator,name=iPhone 14,OS=16.0"
+	cd src && xcodebuild test -scheme UnitTests -destination "OS=16.0"
 
 lint: ## Runs the Pod Linter
 	arch -x86_64 pod lib lint
