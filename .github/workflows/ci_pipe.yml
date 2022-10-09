@@ -18,20 +18,3 @@ jobs:
 
       - name: Run Linter
         run: make lint -B
-
-  tests:
-    name: Unit Tests
-    runs-on: macOS-latest
-    steps:
-
-      - name: Clone Code
-        uses: actions/checkout@v2
-
-      - name: Select Xcode
-        run: sudo xcode-select -switch /Applications/Xcode_12.2.app && /usr/bin/xcodebuild -version
-
-      - name: List Devices
-        run: make devices -B
-
-      - name: Run tests
-        run: cd src && xcodebuild test -scheme UnitTests -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.2'
