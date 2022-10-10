@@ -21,22 +21,17 @@ jobs:
 
   unittests:
     name: Unit ${{matrix.platform}} - Xcode ${{matrix.xcode}} - OS ${{matrix.test-destination-os}}
-    runs-on: macos-11
+    runs-on: macOS-latest
     steps:
 
       - name: Clone Code
         uses: actions/checkout@v2
 
-      - run: |
-          sudo xcode-select -s /Applications/Xcode_13.2.1.app/Contents/Developer
+      - name: Setup Xcode 11.3
+        run: |
+          sudo xcode-select -switch /Applications/Xcode_11.3.app
           swiftc --version
 
-      - name: Prepare iOS 13.7 simulator
+      - name: Run Tests (iPhone 11 Pro max)
         run: |
-          sudo mkdir -p /Library/Developer/CoreSimulator/Profiles/Runtimes
-          sudo ln -s /Applications/Xcode_13.2.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 13.7.simruntime
-          xcrun simctl create custom-test-device "iPhone 8" "com.apple.CoreSimulator.SimRuntime.iOS-13-7"
-
-      - name: Run Tests
-        run: |
-          xcodebuild test -scheme UnitTests -destination "platform=iOS Simulator,OS=13.7,name=iPhone 8"
+          xcodebuild clean test -scheme UnitTests -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
