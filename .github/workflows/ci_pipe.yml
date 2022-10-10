@@ -41,4 +41,4 @@ jobs:
 
       - name: Run Tests
         run: |
-          xcodebuild clean test -scheme UnitTests -destination "platform=iOS Simulator,name=github-iPhone13,OS=15.2"
+          xcodebuild test -scheme UnitTests -destination "platform=iOS Simulator,name=github-iPhone13,OS=15.2"
