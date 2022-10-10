@@ -30,7 +30,7 @@ jobs:
       - name: Setup Xcode 11.3
         run: |
           ls -la /Applications
-          sudo xcode-select -switch /Applications/Xcode_11.7.app
+          sudo xcode-select -switch /Applications/Xcode_13.2.1.app
           swiftc --version
           xcodebuild -showsdks
           xcrun simctl list
