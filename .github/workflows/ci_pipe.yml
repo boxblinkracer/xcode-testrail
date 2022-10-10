@@ -33,11 +33,12 @@ jobs:
           sudo xcode-select -switch /Applications/Xcode_11.7.app
           swiftc --version
           xcodebuild -showsdks
+          xcrun simctl list
 
       - name: Setup Simulator Devices
         run: |
-          xcrun simctl create "ry" "iPhone 11 Pro Max" iOS13.3
+          xcrun simctl create iPhone11 com.apple.CoreSimulator.SimDeviceType.iPhone-11 com.apple.CoreSimulator.SimRuntime.iOS-13–7
 
       - name: Run Tests (iPhone 11 Pro max)
         run: |
-          xcodebuild clean test -scheme UnitTests -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.3"
+          xcodebuild clean test -scheme UnitTests -destination "platform=iOS Simulator,name=iPhone 11,OS=13.7"
