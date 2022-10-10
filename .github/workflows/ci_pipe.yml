@@ -18,3 +18,44 @@ jobs:
 
       - name: Run Linter
         run: make lint -B
+
+  unittests:
+    name: Unit ${{matrix.platform}} - Xcode ${{matrix.xcode}} - OS ${{matrix.test-destination-os}}
+    runs-on: macOS-latest
+    strategy:
+        fail-fast: false
+        matrix:
+          include:
+            # Test on iOS 13.7
+            - runs-on: macos-11
+              platform: 'iOS'
+              xcode: '13.2.1'
+              test-destination-os: '13.7'
+            # iOS 14
+            - runs-on: macos-11
+              platform: 'iOS'
+              xcode: '12.5.1'
+              test-destination-os: 'latest'
+            # iOS 15
+            - runs-on: macos-12
+              platform: 'iOS'
+              xcode: '13.4.1'
+              test-destination-os: 'latest'
+            # iOS 16
+            - runs-on: macos-12
+              platform: 'iOS'
+              xcode: '14.0'
+              test-destination-os: 'latest'
+
+    steps:
+
+      - name: Clone Code
+        uses: actions/checkout@v2
+
+      - run: |
+          sudo xcode-select -s /Applications/Xcode_${{matrix.xcode}}.app/Contents/Developer
+          swiftc --version
+
+      - name: Run Tests
+        run: xcodebuild -configuration ${{matrix.platform}} -destination "${{matrix.test-destination-os}}" test
+
