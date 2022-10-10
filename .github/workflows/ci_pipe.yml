@@ -31,6 +31,12 @@ jobs:
           sudo xcode-select -s /Applications/Xcode_13.2.1.app/Contents/Developer
           swiftc --version
 
+      - name: Prepare iOS 13.7 simulator
+        run: |
+          sudo mkdir -p /Library/Developer/CoreSimulator/Profiles/Runtimes
+          sudo ln -s /Applications/Xcode_13.2.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 13.7.simruntime
+          xcrun simctl create custom-test-device "iPhone 8" "com.apple.CoreSimulator.SimRuntime.iOS-13-7"
+
       - name: Run Tests
         run: |
           xcodebuild test -scheme UnitTests -destination "platform=iOS Simulator,OS=13.7,name=iPhone 8"
