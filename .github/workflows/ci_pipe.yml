@@ -57,5 +57,5 @@ jobs:
           swiftc --version
 
       - name: Run Tests
-        run: xcodebuild -configuration ${{matrix.platform}} -destination "${{matrix.test-destination-os}}" test
-
+        run: |
+          xcodebuild test -scheme UnitTests -configuration ${{matrix.platform}} -destination "platform=iOS Simulator,OS=${{matrix.test-destination-os}},name=iPhone 8"
