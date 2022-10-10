@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+### Changed
+
+- You can now also provide a RunID with a leading "R". The framework will automatically remove it for you.
+
+
 ## [1.1.0]
 
 ### Changed

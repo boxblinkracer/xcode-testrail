@@ -42,3 +42,19 @@ class TestRailConfigTest : XCTestCase
         XCTAssertEqual("123", config.getRunId());
     }
     
+    /**
+     This test verifies that our run id can also contain a "R" as prefix.
+     In this case, the config should replace it, because we only need the INT value in the end.
+     */
+    public func testRunIdWithPrefix()
+    {
+        let contentINI = """
+        TESTRAIL_RUN_ID=R44
+        """
+        
+        let config = TestRailConfig(iniContent: contentINI);
+        
+        XCTAssertEqual("44", config.getRunId());
+    }
+    
+}

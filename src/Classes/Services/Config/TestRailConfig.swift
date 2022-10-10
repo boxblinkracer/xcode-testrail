@@ -26,6 +26,7 @@ class TestRailConfig
         self.password = iniParser.getValue(key: "TESTRAIL_PWD");
         self.runId = iniParser.getValue(key: "TESTRAIL_RUN_ID");
         
+        self.runId = self.runId.replacingOccurrences(of: "R", with: "");
     }
     
     
