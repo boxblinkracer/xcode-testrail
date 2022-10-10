@@ -12,42 +12,31 @@ class TestRail
 
     // we must only register ourself ONCE
     // when running multiple test files of a test plan
-    static var alreadyRegistered : Bool = false;
-
-
+    private static var alreadyRegistered : Bool = false;
+    
+    private static let STATUS_PASSED = 1;
+    private static let STATUS_FAILED = 5;
+    
+    private var config : TestRailConfig;
     private var client : TestRailClient;
-
-    private var domain : String;
-    private var username : String;
-    private var password : String;
-    private var runId : String;
-
-
+   
+    
+    
     init()
     {
+        var configContent = Resource(name: "testrail", type: "conf").content;
 
-        self.domain = "";
-        self.username = "";
-        self.password = "";
-        self.runId = "";
-
-
-        let configContent = Resource(name: "testrail", type: "conf").content;
-
-        if (configContent != nil) {
-
-            let iniParser = IniParser(content: configContent!);
-
-            self.domain = iniParser.getValue(key: "TESTRAIL_DOMAIN");
-            self.username = iniParser.getValue(key: "TESTRAIL_USER");
-            self.password = iniParser.getValue(key: "TESTRAIL_PWD");
-            self.runId = iniParser.getValue(key: "TESTRAIL_RUN_ID");
+        if (configContent == nil) {
+            configContent = "";
         }
-
+      
+        self.config = TestRailConfig(iniContent: configContent!);
+        
+        
         self.client = TestRailClient(
-            domain: domain,
-            username: username,
-            password: password
+            domain: self.config.getDomain(),
+            username: self.config.getUser(),
+            password: self.config.getPassword()
         );
     }
 
@@ -70,33 +59,44 @@ class TestRail
             print("");
             print("TESTRAIL INTEGRATION");
             print("*******************************************");
-            print("TestRail Domain: " + domain);
-            print("TestRail User: " + username);
+            print("TestRail Domain: " + self.config.getDomain());
+            print("TestRail User: " + self.config.getUser());
             print("Mode: Use existing Run");
-            print("RunID: " + runId);
+            print("RunID: " + self.config.getRunId());
             print("");
             print("");
         }
     }
 
-    public func testPassed(caseId: Int, comment : String, durationS: Int)
+    public func testPassed(caseId: String, comment : String, durationS: Int)
     {
         if (!self.isConfigValid())
         {
             return;
         }
 
-        self.client.sendResult(runId: Int(self.runId)!, caseId: caseId, statusId: 1, durationS: durationS, comment: comment);
+        self.client.sendResult(
+            runId: self.config.getRunId(),
+            caseId: caseId,
+            statusId: TestRail.STATUS_PASSED,
+            durationS: durationS,
+            comment: comment
+        );
     }
 
-    public func testFailed(caseId: Int, comment : String, durationS: Int)
+    public func testFailed(caseId: String, comment : String, durationS: Int)
     {
         if (!self.isConfigValid())
         {
             return;
         }
 
-        self.client.sendResult(runId: Int(self.runId)!, caseId: caseId, statusId: 5, durationS: durationS, comment: comment);
+        self.client.sendResult(
+            runId: self.config.getRunId(),
+            caseId: caseId,
+            statusId: TestRail.STATUS_FAILED,
+            durationS: durationS,
+            comment: comment);
     }
 
     private func isConfigValid() -> Bool
@@ -106,7 +106,7 @@ class TestRail
             return false;
         }
 
-        if (self.runId == "")
+        if (self.config.getRunId() == "")
         {
             return false;
         }

@@ -45,7 +45,7 @@ class TestRailClient
         return true;
     }
 
-    public func sendResult(runId : Int, caseId: Int, statusId : Int, durationS : Int, comment : String)
+    public func sendResult(runId : String, caseId: String, statusId : Int, durationS : Int, comment : String)
     {
         do {
 

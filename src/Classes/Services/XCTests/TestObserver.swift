@@ -46,7 +46,7 @@ class TestObserver: NSObject, XCTestObservation
         // but better double check
         if (hasSucceeded) {
             self.testrail.testPassed(
-                caseId: Int(caseIdNumber)!,
+                caseId: caseIdNumber,
                 comment: "Tested by Xcode: " + functionName,
                 durationS: durationS
             );
@@ -75,7 +75,7 @@ class TestObserver: NSObject, XCTestObservation
         let durationS = Int((testCase.testRun?.testDuration)!);
 
         self.testrail.testFailed(
-            caseId: Int(caseIdNumber)!,
+            caseId: caseIdNumber,
             comment: "Tested by Xcode: \n" + functionName + "\n" + description,
             durationS: durationS
         );

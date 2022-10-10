@@ -16,6 +16,8 @@
 		A5414B4B28F37A24003F76A6 /* IniParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5414B3628F37A05003F76A6 /* IniParserTest.swift */; };
 		A5414B4E28F37A45003F76A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5414B4D28F37A45003F76A6 /* XCTest.framework */; platformFilter = ios; };
 		A5414B4F28F37A46003F76A6 /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5414B4D28F37A45003F76A6 /* XCTest.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A554383A28F49299002EBC8B /* TestRailConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554383928F49299002EBC8B /* TestRailConfig.swift */; };
+		A554383C28F496E3002EBC8B /* TestRailConfigTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554383B28F496E3002EBC8B /* TestRailConfigTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		A5414B3628F37A05003F76A6 /* IniParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IniParserTest.swift; sourceTree = "<group>"; };
 		A5414B4128F37A1A003F76A6 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5414B4D28F37A45003F76A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A554383928F49299002EBC8B /* TestRailConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRailConfig.swift; sourceTree = "<group>"; };
+		A554383B28F496E3002EBC8B /* TestRailConfigTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRailConfigTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +109,9 @@
 		A5414B3028F37A05003F76A6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A5414B3128F37A05003F76A6 /* Resource.swift */,
-				A5414B3228F37A05003F76A6 /* IniParser.swift */,
-				A5414B3328F37A05003F76A6 /* TestRailClient.swift */,
-				A5414B3428F37A05003F76A6 /* TestObserver.swift */,
+				A554383E28F4BDEB002EBC8B /* Config */,
+				A554383D28F4BDDD002EBC8B /* TestRail */,
+				A554383F28F4BDF6002EBC8B /* XCTests */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -117,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				A5414B3628F37A05003F76A6 /* IniParserTest.swift */,
+				A554383B28F496E3002EBC8B /* TestRailConfigTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -127,6 +131,32 @@
 				A5414B4D28F37A45003F76A6 /* XCTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A554383D28F4BDDD002EBC8B /* TestRail */ = {
+			isa = PBXGroup;
+			children = (
+				A5414B3328F37A05003F76A6 /* TestRailClient.swift */,
+			);
+			path = TestRail;
+			sourceTree = "<group>";
+		};
+		A554383E28F4BDEB002EBC8B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A5414B3128F37A05003F76A6 /* Resource.swift */,
+				A5414B3228F37A05003F76A6 /* IniParser.swift */,
+				A554383928F49299002EBC8B /* TestRailConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		A554383F28F4BDF6002EBC8B /* XCTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5414B3428F37A05003F76A6 /* TestObserver.swift */,
+			);
+			path = XCTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +271,7 @@
 				A5414B3728F37A05003F76A6 /* TestRail.swift in Sources */,
 				A5414B3928F37A05003F76A6 /* IniParser.swift in Sources */,
 				A5414B3A28F37A05003F76A6 /* TestRailClient.swift in Sources */,
+				A554383A28F49299002EBC8B /* TestRailConfig.swift in Sources */,
 				A5414B3828F37A05003F76A6 /* Resource.swift in Sources */,
 				A5414B3B28F37A05003F76A6 /* TestObserver.swift in Sources */,
 			);
@@ -251,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5414B4B28F37A24003F76A6 /* IniParserTest.swift in Sources */,
+				A554383C28F496E3002EBC8B /* TestRailConfigTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
