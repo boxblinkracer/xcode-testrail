@@ -39,6 +39,6 @@ jobs:
         run: |
           xcrun simctl create github-iPhone11 com.apple.CoreSimulator.SimDeviceType.iPhone-11 com.apple.CoreSimulator.SimRuntime.iOS-13-7
 
-      - name: Run Tests (iPhone 11 Pro max)
+      - name: Run Tests
         run: |
           xcodebuild clean test -scheme UnitTests -destination "platform=iOS Simulator,name=github-iPhone11,OS=13.7"
