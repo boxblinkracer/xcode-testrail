@@ -29,6 +29,7 @@ jobs:
 
       - name: Setup Xcode 11.3
         run: |
+          ls -la /Applications
           sudo xcode-select -switch /Applications/Xcode_11.3.app
           swiftc --version
 
