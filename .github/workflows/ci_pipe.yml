@@ -9,18 +9,18 @@ on:
 jobs:
 
   lint:
-    name: Linter
+    name: Pod Linter
     runs-on: macOS-latest
     steps:
 
       - name: Clone Code
         uses: actions/checkout@v2
 
-      - name: Run Linter
+      - name: Run Pod Linter
         run: make lint -B
 
   unittests:
-    name: Unit ${{matrix.platform}} - Xcode ${{matrix.xcode}} - OS ${{matrix.test-destination-os}}
+    name: Unit Tests
     runs-on: macOS-11
     steps:
 
@@ -37,8 +37,8 @@ jobs:
 
       - name: Setup Simulator Devices
         run: |
-          xcrun simctl create iPhone11 com.apple.CoreSimulator.SimDeviceType.iPhone-11 com.apple.CoreSimulator.SimRuntime.iOS-13-7
+          xcrun simctl create github-iPhone11 com.apple.CoreSimulator.SimDeviceType.iPhone-11 com.apple.CoreSimulator.SimRuntime.iOS-13-7
 
       - name: Run Tests (iPhone 11 Pro max)
         run: |
-          xcodebuild clean test -scheme UnitTests -destination "platform=iOS Simulator,name=iPhone 11,OS=13.7"
+          xcodebuild clean test -scheme UnitTests -destination "platform=iOS Simulator,name=github-iPhone11,OS=13.7"
