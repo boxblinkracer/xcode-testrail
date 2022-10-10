@@ -32,6 +32,7 @@ jobs:
           ls -la /Applications
           sudo xcode-select -switch /Applications/Xcode_11.7.app
           swiftc --version
+          xcodebuild -showsdks
 
       - name: Setup Simulator Devices
         run: |
