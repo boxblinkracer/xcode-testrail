@@ -27,7 +27,7 @@ jobs:
       - name: Clone Code
         uses: actions/checkout@v2
 
-      - name: Setup Xcode 11.3
+      - name: Setup Xcode
         run: |
           ls -la /Applications
           sudo xcode-select -switch /Applications/Xcode_13.2.1.app
@@ -37,8 +37,8 @@ jobs:
 
       - name: Setup Simulator Devices
         run: |
-          xcrun simctl create github-iPhone11 com.apple.CoreSimulator.SimDeviceType.iPhone-11 com.apple.CoreSimulator.SimRuntime.iOS-13-7
+          xcrun simctl create github-iPhone13 com.apple.CoreSimulator.SimDeviceType.iPhone-13 com.apple.CoreSimulator.SimRuntime.iOS-15-2
 
       - name: Run Tests
         run: |
-          xcodebuild clean test -scheme UnitTests -destination "platform=iOS Simulator,name=github-iPhone11,OS=13.7"
+          xcodebuild clean test -scheme UnitTests -destination "platform=iOS Simulator,name=github-iPhone13,OS=15.2"
