@@ -37,7 +37,7 @@ jobs:
 
       - name: Setup Simulator Devices
         run: |
-          xcrun simctl create iPhone11 com.apple.CoreSimulator.SimDeviceType.iPhone-11 com.apple.CoreSimulator.SimRuntime.iOS-13–7
+          xcrun simctl create iPhone11 com.apple.CoreSimulator.SimDeviceType.iPhone-11 com.apple.CoreSimulator.SimRuntime.iOS-13-7
 
       - name: Run Tests (iPhone 11 Pro max)
         run: |
