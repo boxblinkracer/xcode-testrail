@@ -7,17 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5414B3728F37A05003F76A6 /* TestRail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5414B2F28F37A05003F76A6 /* TestRail.swift */; };
-		A5414B3828F37A05003F76A6 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5414B3128F37A05003F76A6 /* Resource.swift */; };
-		A5414B3928F37A05003F76A6 /* IniParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5414B3228F37A05003F76A6 /* IniParser.swift */; };
-		A5414B3A28F37A05003F76A6 /* TestRailClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5414B3328F37A05003F76A6 /* TestRailClient.swift */; };
-		A5414B3B28F37A05003F76A6 /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5414B3428F37A05003F76A6 /* TestObserver.swift */; };
 		A5414B4528F37A1A003F76A6 /* XcodeTestrail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5414B2428F379E2003F76A6 /* XcodeTestrail.framework */; };
-		A5414B4B28F37A24003F76A6 /* IniParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5414B3628F37A05003F76A6 /* IniParserTest.swift */; };
 		A5414B4E28F37A45003F76A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5414B4D28F37A45003F76A6 /* XCTest.framework */; platformFilter = ios; };
 		A5414B4F28F37A46003F76A6 /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5414B4D28F37A45003F76A6 /* XCTest.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A554383A28F49299002EBC8B /* TestRailConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554383928F49299002EBC8B /* TestRailConfig.swift */; };
-		A554383C28F496E3002EBC8B /* TestRailConfigTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554383B28F496E3002EBC8B /* TestRailConfigTest.swift */; };
+		A554384F28F4C111002EBC8B /* TestRail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554384228F4C111002EBC8B /* TestRail.swift */; };
+		A554385028F4C111002EBC8B /* TestRailConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554384528F4C111002EBC8B /* TestRailConfig.swift */; };
+		A554385128F4C111002EBC8B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554384628F4C111002EBC8B /* Resource.swift */; };
+		A554385228F4C111002EBC8B /* IniParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554384728F4C111002EBC8B /* IniParser.swift */; };
+		A554385328F4C111002EBC8B /* TestRailClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554384928F4C111002EBC8B /* TestRailClient.swift */; };
+		A554385428F4C111002EBC8B /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554384B28F4C111002EBC8B /* TestObserver.swift */; };
+		A554385528F4C111002EBC8B /* IniParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554384D28F4C111002EBC8B /* IniParserTest.swift */; };
+		A554385628F4C111002EBC8B /* TestRailConfigTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554384E28F4C111002EBC8B /* TestRailConfigTest.swift */; };
+		A554386628F4C118002EBC8B /* TestRail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554385928F4C118002EBC8B /* TestRail.swift */; };
+		A554386728F4C118002EBC8B /* TestRailConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554385C28F4C118002EBC8B /* TestRailConfig.swift */; };
+		A554386828F4C118002EBC8B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554385D28F4C118002EBC8B /* Resource.swift */; };
+		A554386928F4C118002EBC8B /* IniParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554385E28F4C118002EBC8B /* IniParser.swift */; };
+		A554386A28F4C118002EBC8B /* TestRailClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554386028F4C118002EBC8B /* TestRailClient.swift */; };
+		A554386B28F4C118002EBC8B /* TestObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554386228F4C118002EBC8B /* TestObserver.swift */; };
+		A554386E28F4C12D002EBC8B /* IniParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554386428F4C118002EBC8B /* IniParserTest.swift */; };
+		A554386F28F4C130002EBC8B /* TestRailConfigTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A554386528F4C118002EBC8B /* TestRailConfigTest.swift */; };
+		A554387128F4C155002EBC8B /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = A554387028F4C155002EBC8B /* CHANGELOG.md */; };
+		A554387728F4C162002EBC8B /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = A554387228F4C162002EBC8B /* CHANGELOG.md */; };
+		A554387828F4C162002EBC8B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A554387328F4C162002EBC8B /* README.md */; };
+		A554387928F4C162002EBC8B /* XcodeTestrail.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A554387428F4C162002EBC8B /* XcodeTestrail.podspec */; };
+		A554387A28F4C162002EBC8B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A554387528F4C162002EBC8B /* LICENSE */; };
+		A554387B28F4C162002EBC8B /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = A554387628F4C162002EBC8B /* makefile */; };
+		A554387F28F4C1A1002EBC8B /* ci_pipe.yml in Resources */ = {isa = PBXBuildFile; fileRef = A554387E28F4C1A1002EBC8B /* ci_pipe.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +61,31 @@
 
 /* Begin PBXFileReference section */
 		A5414B2428F379E2003F76A6 /* XcodeTestrail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeTestrail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5414B2F28F37A05003F76A6 /* TestRail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRail.swift; sourceTree = "<group>"; };
-		A5414B3128F37A05003F76A6 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		A5414B3228F37A05003F76A6 /* IniParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IniParser.swift; sourceTree = "<group>"; };
-		A5414B3328F37A05003F76A6 /* TestRailClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRailClient.swift; sourceTree = "<group>"; };
-		A5414B3428F37A05003F76A6 /* TestObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
-		A5414B3628F37A05003F76A6 /* IniParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IniParserTest.swift; sourceTree = "<group>"; };
 		A5414B4128F37A1A003F76A6 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5414B4D28F37A45003F76A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		A554383928F49299002EBC8B /* TestRailConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRailConfig.swift; sourceTree = "<group>"; };
-		A554383B28F496E3002EBC8B /* TestRailConfigTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRailConfigTest.swift; sourceTree = "<group>"; };
+		A554384228F4C111002EBC8B /* TestRail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRail.swift; sourceTree = "<group>"; };
+		A554384528F4C111002EBC8B /* TestRailConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRailConfig.swift; sourceTree = "<group>"; };
+		A554384628F4C111002EBC8B /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		A554384728F4C111002EBC8B /* IniParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IniParser.swift; sourceTree = "<group>"; };
+		A554384928F4C111002EBC8B /* TestRailClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRailClient.swift; sourceTree = "<group>"; };
+		A554384B28F4C111002EBC8B /* TestObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
+		A554384D28F4C111002EBC8B /* IniParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IniParserTest.swift; sourceTree = "<group>"; };
+		A554384E28F4C111002EBC8B /* TestRailConfigTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRailConfigTest.swift; sourceTree = "<group>"; };
+		A554385928F4C118002EBC8B /* TestRail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRail.swift; sourceTree = "<group>"; };
+		A554385C28F4C118002EBC8B /* TestRailConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRailConfig.swift; sourceTree = "<group>"; };
+		A554385D28F4C118002EBC8B /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		A554385E28F4C118002EBC8B /* IniParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IniParser.swift; sourceTree = "<group>"; };
+		A554386028F4C118002EBC8B /* TestRailClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRailClient.swift; sourceTree = "<group>"; };
+		A554386228F4C118002EBC8B /* TestObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestObserver.swift; sourceTree = "<group>"; };
+		A554386428F4C118002EBC8B /* IniParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IniParserTest.swift; sourceTree = "<group>"; };
+		A554386528F4C118002EBC8B /* TestRailConfigTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRailConfigTest.swift; sourceTree = "<group>"; };
+		A554387028F4C155002EBC8B /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		A554387228F4C162002EBC8B /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		A554387328F4C162002EBC8B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A554387428F4C162002EBC8B /* XcodeTestrail.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XcodeTestrail.podspec; sourceTree = "<group>"; };
+		A554387528F4C162002EBC8B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A554387628F4C162002EBC8B /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		A554387E28F4C1A1002EBC8B /* ci_pipe.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = ci_pipe.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +111,15 @@
 		A5414B1A28F379E2003F76A6 = {
 			isa = PBXGroup;
 			children = (
-				A5414B2E28F37A05003F76A6 /* Classes */,
-				A5414B3528F37A05003F76A6 /* Tests */,
-				A5414B2528F379E2003F76A6 /* Products */,
+				A554387C28F4C1A1002EBC8B /* .github */,
 				A5414B4C28F37A45003F76A6 /* Frameworks */,
+				A5414B2528F379E2003F76A6 /* Products */,
+				A554385728F4C118002EBC8B /* src */,
+				A554387528F4C162002EBC8B /* LICENSE */,
+				A554387628F4C162002EBC8B /* makefile */,
+				A554387228F4C162002EBC8B /* CHANGELOG.md */,
+				A554387328F4C162002EBC8B /* README.md */,
+				A554387428F4C162002EBC8B /* XcodeTestrail.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,66 +132,156 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A5414B2E28F37A05003F76A6 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				A5414B2F28F37A05003F76A6 /* TestRail.swift */,
-				A5414B3028F37A05003F76A6 /* Services */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		A5414B3028F37A05003F76A6 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				A554383E28F4BDEB002EBC8B /* Config */,
-				A554383D28F4BDDD002EBC8B /* TestRail */,
-				A554383F28F4BDF6002EBC8B /* XCTests */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		A5414B3528F37A05003F76A6 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				A5414B3628F37A05003F76A6 /* IniParserTest.swift */,
-				A554383B28F496E3002EBC8B /* TestRailConfigTest.swift */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		A5414B4C28F37A45003F76A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A554387028F4C155002EBC8B /* CHANGELOG.md */,
+				A554384028F4C111002EBC8B /* src */,
 				A5414B4D28F37A45003F76A6 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A554383D28F4BDDD002EBC8B /* TestRail */ = {
+		A554384028F4C111002EBC8B /* src */ = {
 			isa = PBXGroup;
 			children = (
-				A5414B3328F37A05003F76A6 /* TestRailClient.swift */,
+				A554384128F4C111002EBC8B /* Classes */,
+				A554384C28F4C111002EBC8B /* Tests */,
 			);
-			path = TestRail;
+			path = src;
 			sourceTree = "<group>";
 		};
-		A554383E28F4BDEB002EBC8B /* Config */ = {
+		A554384128F4C111002EBC8B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A5414B3128F37A05003F76A6 /* Resource.swift */,
-				A5414B3228F37A05003F76A6 /* IniParser.swift */,
-				A554383928F49299002EBC8B /* TestRailConfig.swift */,
+				A554384228F4C111002EBC8B /* TestRail.swift */,
+				A554384328F4C111002EBC8B /* Services */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A554384328F4C111002EBC8B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A554384428F4C111002EBC8B /* Config */,
+				A554384828F4C111002EBC8B /* TestRail */,
+				A554384A28F4C111002EBC8B /* XCTests */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A554384428F4C111002EBC8B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A554384528F4C111002EBC8B /* TestRailConfig.swift */,
+				A554384628F4C111002EBC8B /* Resource.swift */,
+				A554384728F4C111002EBC8B /* IniParser.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
 		};
-		A554383F28F4BDF6002EBC8B /* XCTests */ = {
+		A554384828F4C111002EBC8B /* TestRail */ = {
 			isa = PBXGroup;
 			children = (
-				A5414B3428F37A05003F76A6 /* TestObserver.swift */,
+				A554384928F4C111002EBC8B /* TestRailClient.swift */,
+			);
+			path = TestRail;
+			sourceTree = "<group>";
+		};
+		A554384A28F4C111002EBC8B /* XCTests */ = {
+			isa = PBXGroup;
+			children = (
+				A554384B28F4C111002EBC8B /* TestObserver.swift */,
 			);
 			path = XCTests;
+			sourceTree = "<group>";
+		};
+		A554384C28F4C111002EBC8B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A554384D28F4C111002EBC8B /* IniParserTest.swift */,
+				A554384E28F4C111002EBC8B /* TestRailConfigTest.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A554385728F4C118002EBC8B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A554385828F4C118002EBC8B /* Classes */,
+				A554386328F4C118002EBC8B /* Tests */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		A554385828F4C118002EBC8B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A554385928F4C118002EBC8B /* TestRail.swift */,
+				A554385A28F4C118002EBC8B /* Services */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A554385A28F4C118002EBC8B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A554385B28F4C118002EBC8B /* Config */,
+				A554385F28F4C118002EBC8B /* TestRail */,
+				A554386128F4C118002EBC8B /* XCTests */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A554385B28F4C118002EBC8B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A554385C28F4C118002EBC8B /* TestRailConfig.swift */,
+				A554385D28F4C118002EBC8B /* Resource.swift */,
+				A554385E28F4C118002EBC8B /* IniParser.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		A554385F28F4C118002EBC8B /* TestRail */ = {
+			isa = PBXGroup;
+			children = (
+				A554386028F4C118002EBC8B /* TestRailClient.swift */,
+			);
+			path = TestRail;
+			sourceTree = "<group>";
+		};
+		A554386128F4C118002EBC8B /* XCTests */ = {
+			isa = PBXGroup;
+			children = (
+				A554386228F4C118002EBC8B /* TestObserver.swift */,
+			);
+			path = XCTests;
+			sourceTree = "<group>";
+		};
+		A554386328F4C118002EBC8B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A554386428F4C118002EBC8B /* IniParserTest.swift */,
+				A554386528F4C118002EBC8B /* TestRailConfigTest.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A554387C28F4C1A1002EBC8B /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				A554387D28F4C1A1002EBC8B /* workflows */,
+			);
+			path = .github;
+			sourceTree = "<group>";
+		};
+		A554387D28F4C1A1002EBC8B /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				A554387E28F4C1A1002EBC8B /* ci_pipe.yml */,
+			);
+			path = workflows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +376,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A554387928F4C162002EBC8B /* XcodeTestrail.podspec in Resources */,
+				A554387828F4C162002EBC8B /* README.md in Resources */,
+				A554387F28F4C1A1002EBC8B /* ci_pipe.yml in Resources */,
+				A554387128F4C155002EBC8B /* CHANGELOG.md in Resources */,
+				A554387728F4C162002EBC8B /* CHANGELOG.md in Resources */,
+				A554387A28F4C162002EBC8B /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,12 +399,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5414B3728F37A05003F76A6 /* TestRail.swift in Sources */,
-				A5414B3928F37A05003F76A6 /* IniParser.swift in Sources */,
-				A5414B3A28F37A05003F76A6 /* TestRailClient.swift in Sources */,
-				A554383A28F49299002EBC8B /* TestRailConfig.swift in Sources */,
-				A5414B3828F37A05003F76A6 /* Resource.swift in Sources */,
-				A5414B3B28F37A05003F76A6 /* TestObserver.swift in Sources */,
+				A554385128F4C111002EBC8B /* Resource.swift in Sources */,
+				A554384F28F4C111002EBC8B /* TestRail.swift in Sources */,
+				A554385528F4C111002EBC8B /* IniParserTest.swift in Sources */,
+				A554385428F4C111002EBC8B /* TestObserver.swift in Sources */,
+				A554386928F4C118002EBC8B /* IniParser.swift in Sources */,
+				A554385628F4C111002EBC8B /* TestRailConfigTest.swift in Sources */,
+				A554386B28F4C118002EBC8B /* TestObserver.swift in Sources */,
+				A554385328F4C111002EBC8B /* TestRailClient.swift in Sources */,
+				A554385028F4C111002EBC8B /* TestRailConfig.swift in Sources */,
+				A554386628F4C118002EBC8B /* TestRail.swift in Sources */,
+				A554386A28F4C118002EBC8B /* TestRailClient.swift in Sources */,
+				A554386728F4C118002EBC8B /* TestRailConfig.swift in Sources */,
+				A554385228F4C111002EBC8B /* IniParser.swift in Sources */,
+				A554386828F4C118002EBC8B /* Resource.swift in Sources */,
+				A554387B28F4C162002EBC8B /* makefile in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +421,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5414B4B28F37A24003F76A6 /* IniParserTest.swift in Sources */,
-				A554383C28F496E3002EBC8B /* TestRailConfigTest.swift in Sources */,
+				A554386E28F4C12D002EBC8B /* IniParserTest.swift in Sources */,
+				A554386F28F4C130002EBC8B /* TestRailConfigTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
