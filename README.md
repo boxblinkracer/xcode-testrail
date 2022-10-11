@@ -61,7 +61,7 @@ TESTRAIL_RUN_ID=161
 ```
 
 
-#### 3.2 Create new Run in TestRail for every Cypress run
+#### 3.2 Create new Run in TestRail for every Xcode run
 
 Sometimes you want to create test runs dynamically inside TestRail.
 For this, just assign the ProjectID and the optional MilestoneID of TestRail in your `testrail.conf`.
