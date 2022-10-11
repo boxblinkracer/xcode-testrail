@@ -13,7 +13,7 @@ devices: ## Lists all available Xcode devices
 # ---------------------------------------------------------------------------------------------
 
 tests: ## Starts all Unit Tests
-	xcodebuild test -scheme UnitTests -destination "platform=iOS Simulator,name=iPhone 14,OS=16.0"
+	xcodebuild test -scheme XcodeTestrail -destination "platform=iOS Simulator,name=iPhone 14,OS=16.0"
 
 lint: ## Runs the Pod Linter
 	arch -x86_64 pod lib lint
@@ -22,3 +22,4 @@ lint: ## Runs the Pod Linter
 
 release: ## Releases a new version
 	arch -x86_64 pod trunk push XcodeTestrail.podspec
+          
