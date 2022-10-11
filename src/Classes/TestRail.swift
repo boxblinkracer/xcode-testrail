@@ -137,7 +137,7 @@ class TestRail
             return false;
         }
         
-        if (self.config.getRunId() == "")
+        if (self.config.getRunId() == "" && self.config.getProjectId() == "")
         {
             return false;
         }
