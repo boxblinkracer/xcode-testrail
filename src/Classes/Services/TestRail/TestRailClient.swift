@@ -71,8 +71,7 @@ class TestRailClient
             
             let response = try self.postRequest(slug: "/add_run/" + String(projectId), body: result);
             
-            let data = response["data"] as! [String : Any];
-            let runID = data["id"] as! String;
+            let runID = String(response["id"] as! Int);
             
             print ("Test Run created in TestRail: " + runID);
             
@@ -94,7 +93,7 @@ class TestRailClient
                 "case_ids": caseIds
             ] as [String : Any];
             
-            let response = try self.postRequest(slug: "/update_run/" + String(runId), body: result);
+            _ = try self.postRequest(slug: "/update_run/" + String(runId), body: result);
             
             print ("Test Run updated in TestRail: " + runId);
             
@@ -107,7 +106,7 @@ class TestRailClient
     {
         do {
             
-            let response = try self.postRequest(slug: "/close_run/" + String(runId), body: [:]);
+            _ = try self.postRequest(slug: "/close_run/" + String(runId), body: [:]);
             
             print ("Test Run closed in TestRail: " + runId);
             
@@ -146,7 +145,7 @@ class TestRailClient
             }
             
             
-            let response = try self.postRequest(slug: "/add_results_for_cases/" + String(runId), body: result);
+            _ = try self.postRequest(slug: "/add_results_for_cases/" + String(runId), body: result);
             
             print ("TestRail Result sent for case C" + String(caseId));
             
@@ -197,6 +196,10 @@ class TestRailClient
         
         
         let json = try JSONSerialization.jsonObject(with: apiResponse!, options: []) as? [String: Any];
+        
+        if (json == nil) {
+            return [:];
+        }
         
         return json!;
     }

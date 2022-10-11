@@ -81,10 +81,16 @@ class TestRail
                 print("Name: " + self.config.getRunName());
                 print("Close Run: " + String(self.config.isCloseRun()));
                 
+                var name = self.config.getRunName()
+                
+                if (name == "") {
+                    name = "Xcode Test Run";
+                }
+                
                 let newRunID = self.client.createRun(
                     projectId: self.config.getProjectId(),
                     milestoneId: self.config.getMilestoneId(),
-                    name: self.config.getRunName(),
+                    name: name,
                     description: ""
                 );
                 

@@ -55,7 +55,7 @@ class TestRailConfig
     
     public func isCreateRunMode() -> Bool
     {
-        return (self.runId == "");
+        return (self.projectId != "");
     }
     
     public func getDomain() -> String

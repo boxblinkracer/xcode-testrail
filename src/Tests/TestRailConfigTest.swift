@@ -111,4 +111,31 @@ class TestRailConfigTest : XCTestCase
         XCTAssertEqual("123", config.getRunId());
     }
     
+    
+    public func testExistingRunMode()
+    {
+        let config = TestRailConfig(iniContent: "");
+        
+        XCTAssertEqual("", config.getRunId());
+        
+        config.setRunId(runId: "R123");
+        
+        XCTAssertEqual(false, config.isCreateRunMode());
+    }
+    
+    public func testCreateRunMode()
+    {
+        let contentINI = """
+        TESTRAIL_PROJECT_ID=P44
+        """
+        
+        let config = TestRailConfig(iniContent: contentINI);
+        
+        XCTAssertEqual("", config.getRunId());
+        
+        config.setRunId(runId: "R123");
+        
+        XCTAssertEqual(true, config.isCreateRunMode());
+    }
+    
 }
