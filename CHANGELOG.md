@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+
+### Added
+
+- Added new option to also have Test Runs automatically created in TestRail. Please see the README for more.
+
 ### Changed
 
 - You can now also provide a RunID with a leading "R". The framework will automatically remove it for you.

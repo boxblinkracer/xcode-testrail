@@ -21,8 +21,8 @@ class TestObserver: NSObject, XCTestObservation
     }
 
 
-    public func testCaseDidFinish(_ testCase: XCTestCase) {
-
+    public func testCaseDidFinish(_ testCase: XCTestCase)
+    {
         let functionName = testCase.name;
 
         let regex = try! NSRegularExpression(pattern: "([_]+[C]+\\d+)")
@@ -51,11 +51,10 @@ class TestObserver: NSObject, XCTestObservation
                 durationS: durationS
             );
         }
-
     }
 
-    public func testCase(_ testCase: XCTestCase, didFailWithDescription description: String, inFile filePath: String?, atLine lineNumber: Int) {
-
+    public func testCase(_ testCase: XCTestCase, didFailWithDescription description: String, inFile filePath: String?, atLine lineNumber: Int)
+    {
         let functionName = testCase.name;
 
         let regex = try! NSRegularExpression(pattern: "([_]+[C]+\\d+)")
@@ -83,5 +82,11 @@ class TestObserver: NSObject, XCTestObservation
         failedTC += 1
     }
 
+    public func testSuiteDidFinish(_ testSuite: XCTestSuite)
+    {
+        self.testrail.onTestRunFinished();
+    }
+
+    
 }
 

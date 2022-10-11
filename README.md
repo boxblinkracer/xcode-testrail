@@ -41,19 +41,43 @@ pod install
 Now configure your credentials for the TestRail API.
 Just add this snippet in a `testrail.conf` file in the root directory of your project.
 
-Please keep in mind, the `runId` is always the test run, that you want to send the results to.
-You can find the ID inside the test run in TestRail. It usually starts with an R, like "R68".
-
 ```ini 
 TESTRAIL_DOMAIN=xxx.testrail.io
 TESTRAIL_USER=xxx
 TESTRAIL_PWD=xxxx
+```
+
+
+### 3. Setup Mode
+
+#### 3.1 Send result to specific Run in TestRail
+
+Just assign the Run ID of TestRail in your `testrail.conf` and all results will be sent to this run.
+
+Results will only be saved, if the sent TestCaseID is also existing in that run inside TestRail.
+
+```ini 
 TESTRAIL_RUN_ID=161
 ```
 
 
+#### 3.2 Create new Run in TestRail for every Cypress run
 
-### 3. Register Plugin
+Sometimes you want to create test runs dynamically inside TestRail.
+For this, just assign the ProjectID and the optional MilestoneID of TestRail in your `testrail.conf`.
+
+The integration will then start a new run in TestRail and send the results to this one.
+It is also possible to provide a custom (or dynamically created) name for the new test run.
+
+```ini 
+TESTRAIL_PROJECT_ID=14                      // required project id
+TESTRAIL_MILESTONE_ID=5                     // optional, a milestone if yo have one
+TESTRAIL_RUN_NAME=XCODE RUN iPhone 14       // the name you want to use for this test run
+TESTRAIL_CLOSE_RUN=true                     // optional, if you want to close a run automatically. default is FALSE
+```
+
+
+### 4. Register Plugin
 
 Just register the TestRail integration in the setup of your test files.
 Also make sure to import the module with the `@testable` keyword, otherwise TestRail will not be found!
@@ -72,7 +96,7 @@ override func setUpWithError() throws
 ```
 
 
-### 4. Map Test Cases
+### 5. Map Test Cases
 
 We're almost done.
 You can now map TestRail test cases to your Xcode tests.
@@ -90,6 +114,8 @@ public func testMyFeature_C6437()
 ## That's it!
 
 You can now start Xcode, and all your results should be sent to TestRail as soon as your mapped tests pass or fail!
+
+
 
 # CI/CD Pipelines
 
@@ -128,4 +154,4 @@ xcodebuild test -workspace xxx -scheme xxx -testPlan UITestsPlan -destination 'p
 
 ## License
 
-xcode-testrail is available under the MIT license. See the LICENSE file for more info.
+XcodeTestrail is available under the MIT license. See the LICENSE file for more info.
